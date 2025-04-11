@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="MyTask.Site" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">Default Title</asp:ContentPlaceHolder>
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .logo a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+        .navbar .menu a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .content {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Tasks.aspx">MyTask</a>
+            </div>
+            <div class="menu">
+                <a href="Home.aspx">Home</a>
+                <a href="AddTask.aspx">Add Task</a>
+                <a href="Logout.aspx">Logout</a>
+            </div>
+        </div>
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <p>© 2025 MyTask. All rights reserved.</p>
+        </footer>
+    </form>
+</body>
+</html>
